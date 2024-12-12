@@ -1,0 +1,22 @@
+server:
+  port: 8082
+  forward-headers-strategy: FRAMEWORK
+spring:
+  jwt:
+    secret: ${JWT_SECRET}
+  data:
+    mongodb:
+      uri: mongodb+srv://ghkdwngns:${MONGODB_PW}@sekssak.gfbqnde.mongodb.net/chatdb?retryWrites=true&w=majority&ssl=true
+
+  r2dbc:
+    url: r2dbc:mysql://helloworld-rds-mysql8.c36moaasm9qn.ap-northeast-2.rds.amazonaws.com:3306/summary
+    username: sekssak
+    password: ${MY_PASSWORD}
+
+openai:
+  api:
+    key: ${OPENAI_API_KEY}
+
+
+#    jdbc:mysql://sekssak:c36moaasm9qn:ap-northeast-2:rds:amazonaws:com:3306:
+#    url: jdbc:mysql://sekssak.c36moaasm9qn.ap-northeast-2.rds.amazonaws.com:3306/summary
