@@ -1,0 +1,22 @@
+server:
+  port: 8082
+  forward-headers-strategy: FRAMEWORK
+spring:
+  jwt:
+    secret: ${JWT_SECRET}
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/chatdb
+
+  r2dbc:
+    url: r2dbc:mysql://localhost:3307/summary
+    username: root
+    password: 1234
+
+openai:
+  api:
+    key: ${OPENAI_API_KEY}
+
+
+#    jdbc:mysql://sekssak:c36moaasm9qn:ap-northeast-2:rds:amazonaws:com:3306:
+#    url: jdbc:mysql://sekssak.c36moaasm9qn.ap-northeast-2.rds.amazonaws.com:3306/summary
